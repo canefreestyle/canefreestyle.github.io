@@ -1,7 +1,7 @@
 // Define a variable for cane_urls
 let cane_urls = '';
 
-// Function to set the href attribute to a random URL and open it in a new tab
+// Function to open a random URL in a new tab
 function openRandomURL() {
   const urlsArray = cane_urls.trim().split('\n').map(url => url.trim());
   const randomIndex = Math.floor(Math.random() * urlsArray.length);
@@ -28,11 +28,11 @@ document.getElementById("randomLink").addEventListener("click", function(event) 
 });
 
 // Fetch the content of the "cane_urls.txt" file
-fetch('cane_urls.txt')
+fetch('files/cane_urls.txt')
   .then(response => response.text())
   .then(data => {
     cane_urls = data;
   })
   .catch(error => {
     console.error('Error loading cane_urls.txt:', error);
-  });
+});
