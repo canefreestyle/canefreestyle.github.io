@@ -1,9 +1,9 @@
-// Define a variable for cane_urls
-let cane_urls = '';
+// Define a variable for cane_links
+let cane_links = '';
 
 // Function to open a random URL in a new tab
 function openRandomURL() {
-    const urlsArray = cane_urls.trim().split('\n').map(url => url.trim());
+    const urlsArray = cane_links.trim().split('\n').map(url => url.trim());
     const randomIndex = Math.floor(Math.random() * urlsArray.length);
     const randomURL = urlsArray[randomIndex];
     window.open(randomURL, "_blank");
@@ -22,16 +22,23 @@ function displayCurrentDate() {
 // Display the current date when the page loads
 displayCurrentDate();
 
+// Function to count the lines in cane_links
+function countCaneLinks() {
+  const urlsArray = cane_links.trim().split('\n').map(url => url.trim());
+  document.getElementById("caneLinksCount").textContent = urlsArray.length;
+}
+
 document.getElementById("randomLink").addEventListener("click", function(event) {
     event.preventDefault(); // Prevent the default link behavior (navigating to the href)
     openRandomURL(); // Open a random URL in a new tab when the link is clicked
 });
 
-// Fetch the content of the "cane_urls.txt" file
+// Fetch the content of the "cane_links.txt" file
 fetch('https://canefreestyle.github.io/files/cane_links.txt')
     .then(response => response.text())
     .then(data => {
-        cane_urls = data;
+        cane_links = data;
+        countCaneLinks();
 })
 
 .catch(error => {
