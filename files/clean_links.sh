@@ -12,8 +12,13 @@ output_file="modified_links.txt"
 # Replace "%3D" with ""
 sed -e 's|https://www.youtube.com/watch?v=|https://youtu.be/|g' \
     -e 's|%3D||g' \
+    -e 's|reel\/|p\/|g' \
     -e 's|&index=[^&]*|?|g' \
     -e 's|\&list=[^&]*||g' \
+    -e 's|\?list=[^&]*|?|g' \
+    -e 's|\?list=[^&]*|?|g' \
+    -e 's|\&t=|\?t=|g' \
+    -e 's|\??t=|\?t=|g' \
     -e 's|\?$||' \
     -e 's|&pp=[^&]*|?|g' "$input_file" > "$output_file"
 
