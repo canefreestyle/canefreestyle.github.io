@@ -38,7 +38,6 @@ fetch('https://canefreestyle.github.io/files/cane_links.txt')
     .then(response => response.text())
     .then(data => {
         cane_links = data;
-        countCaneLinks();
 })
 
 .catch(error => {
