@@ -25,7 +25,8 @@ displayCurrentDate();
 // Function to count the lines in cane_links
 function countCaneLinks() {
   const urlsArray = cane_links.trim().split('\n').map(url => url.trim());
-  document.getElementById("caneLinksCount").textContent = urlsArray.length;
+  const formattedCount = urlsArray.length.toLocaleString(); // Format the count with commas
+  document.getElementById("caneLinksCount").textContent = formattedCount;
 }
 
 document.getElementById("randomLink").addEventListener("click", function(event) {
