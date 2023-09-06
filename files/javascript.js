@@ -34,10 +34,11 @@ document.getElementById("randomLink").addEventListener("click", function(event) 
 });
 
 // Fetch the content of the "cane_links.txt" file
-fetch('https://canefreestyle.github.io/files/cane_links.txt')
+fetch('https://canefreestyle.com/files/cane_links.txt')
     .then(response => response.text())
     .then(data => {
         cane_links = data;
+        countCaneLinks();
 })
 
 .catch(error => {
