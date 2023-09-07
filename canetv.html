@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cane Freestyle</title>
+</head>
+<body>
+    <h1>Cane Freestyle</h1>
+    
+    <iframe id="topFrame" style="height: 95%; width: 100%; border:none;"></iframe>
+
+    <div style="position: absolute; bottom: 0; width: 99%;">
+        <iframe id="bottomFrame" style="height: 5%; width: 100%; border:1px solid black;">
+            <button id="randomButton">Random</button>
+        </iframe>
+    </div>
+
+    <script>
+        // Function to open a random URL in the top iframe
+        function openRandomURL() {
+            const urlsArray = [
+                "https://www.instagram.com/p/19CQhvJXdH/",
+                "https://www.instagram.com/p/1fFzO8JXYh/",
+                // Add more URLs here
+            ];
+
+            const randomIndex = Math.floor(Math.random() * urlsArray.length);
+            const randomURL = urlsArray[randomIndex];
+            const topFrame = document.getElementById("topFrame");
+            topFrame.src = randomURL;
+        }
+
+        // Add click event listener to the "Random" button inside the bottom iframe
+        const bottomFrame = document.getElementById("bottomFrame");
+        const randomButton = bottomFrame.contentDocument.getElementById("randomButton");
+        randomButton.addEventListener("click", openRandomURL);
+    </script>
+</body>
+</html>
