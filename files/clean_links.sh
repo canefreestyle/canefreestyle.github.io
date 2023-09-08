@@ -13,6 +13,7 @@ output_file="modified_links.txt"
 sed -e 's|https://www.youtube.com/watch?v=|https://youtu.be/|g' \
     -e 's|%3D||g' \
     -e 's|reel\/|p\/|g' \
+    -e 's|www.||' \
     -e 's|&index=[^&]*|?|g' \
     -e 's|\&list=[^&]*||g' \
     -e 's|\?list=[^&]*|?|g' \
