@@ -8,6 +8,7 @@
 <style>
 table {
     counter-reset: rowNumber;
+    border: 1px solid red;
 }
 
 table tr:not(:first-child) {
@@ -18,6 +19,10 @@ table tr td:first-child::before {
     content: counter(rowNumber);
     min-width: 1em;
     margin-right: 0.5em;
+}
+
+col:nth-child(3) {
+    white-space: nowrap;
 }
 </style>
 <body>
@@ -33,7 +38,7 @@ table tr td:first-child::before {
 </div>
 </div>
 <!-- The Main Body -->
-<table class="w3-table w3-bordered w3-striped w3-padding-64" style="margin-top:75px">
+<table class="w3-table w3-bordered w3-border-red w3-padding-64" style="margin-top:75px">
 
 <tr>
 <th></th>
