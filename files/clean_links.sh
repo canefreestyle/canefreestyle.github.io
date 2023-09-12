@@ -16,6 +16,8 @@ sed -e 's|www\.||' \
     -e 's|%3D||g' \
     -e 's|reel/|p/|g' \
     -e 's|&index=[^&]*|?|g' \
+    -e 's|utm_source=[^&]*|?|g' \
+    -e 's|&igshid=[^&]*|?|g' \
     -e 's|&list=[^&]*||g' \
     -e 's|\?list=[^&]*|?|g' \
     -e 's|&t=|\?t=|g' \
