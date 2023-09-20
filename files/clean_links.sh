@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Define the input and output file
-input_file="cane_links.txt"
-output_file="modified_links.txt"
+input_file="files/cane_links.txt"
+output_file="files/modified_links.txt"
 
 # Replace "https://www.youtube.com/watch?v=" with "https://youtu.be/"
 # Replace "&index=<VARIABLE STRING>" with "?"
