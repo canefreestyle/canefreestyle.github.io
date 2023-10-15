@@ -2028,6 +2028,7 @@ https://instagram.com/p/CoYaAmzInOj/
 https://instagram.com/p/CoYCA7MAqIg/
 https://instagram.com/p/CoYMIL6jx71/
 https://instagram.com/p/Cp07hgpr_GI/
+https://instagram.com/p/Cp07hgpr_GI/?img_index=2
 https://instagram.com/p/Cp0wEq_tJNZ/
 https://instagram.com/p/Cp3IIdsPq2s/
 https://instagram.com/p/Cp5wXfQv_B9/
@@ -2855,6 +2856,7 @@ https://instagram.com/p/CyPppQ5s-yp/
 https://instagram.com/p/CyPYA9QLlPp/
 https://instagram.com/p/CyRfaWErLxK/
 https://instagram.com/p/CYSebcqIw72/
+https://instagram.com/p/CyUEruELzRe/
 https://instagram.com/p/CYW066PlFma/
 https://instagram.com/p/CYWgGBKKuKo/
 https://instagram.com/p/CYX1opLooPJ/
@@ -2869,6 +2871,7 @@ https://instagram.com/p/CYXRiTZABh8/
 https://instagram.com/p/CYXrl_hFaMT/
 https://instagram.com/p/CYXVSIYqlZz/
 https://instagram.com/p/CYYD60QFrTs/
+https://instagram.com/p/CyZNyL3LOQy/
 https://instagram.com/p/CYZskWOKeDJ/
 https://instagram.com/p/CYZsYeyKVho/
 https://instagram.com/p/CZ1zMFUjP5p/
@@ -3824,7 +3827,7 @@ https://youtu.be/laXd_Ob5pQQ
 https://youtu.be/lBtzzLjKgiI?t=7
 https://youtu.be/LcA_ah5f2sk
 https://youtu.be/LcD8lh4Sz5k?t=159
-https://youtu.be/LDHeRYKVqEo
+https://youtu.be/LDHeRYKVqEo?t=80
 https://youtu.be/lE1mwcT5zRM
 https://youtu.be/LE1Zx69CgXY
 https://youtu.be/le28h4ZbOao
@@ -3963,6 +3966,7 @@ https://youtu.be/oP9MpBJxtlo?t=304
 https://youtu.be/OpmlqNJN2D8
 https://youtu.be/opxz5EDU338
 https://youtu.be/oqkzDj7H5FU
+https://youtu.be/or9m_hVQsnw
 https://youtu.be/Os6OMhWOGvU
 https://youtu.be/OS76WZUl5NA
 https://youtu.be/oST03U4dzwc
@@ -4157,6 +4161,8 @@ https://youtu.be/tKuJ1cKdumo?t=242
 https://youtu.be/tMEjA3Fa7BI
 https://youtu.be/tMKgz6u8v5M
 https://youtu.be/TmShp7B3HaE
+https://youtu.be/TmShp7B3HaE?t=273
+https://youtu.be/TmShp7B3HaE?t=622
 https://youtu.be/TOdyCGbeQi8?t=65
 https://youtu.be/TOOHKDGisVI
 https://youtu.be/tOtQawlDr58
@@ -4204,6 +4210,7 @@ https://youtu.be/uKlDtX4IS40
 https://youtu.be/ulCP2RcltOg
 https://youtu.be/UlJAK36-9HA
 https://youtu.be/Ulv3RKnzOus
+https://youtu.be/ulw4ZZRBP2w?t=222
 https://youtu.be/Umsfi9p3Pg8?t=183
 https://youtu.be/UPScYLRPytQ?t=53
 https://youtu.be/uuq6oD_wHs8?t=17
@@ -4403,7 +4410,6 @@ https://youtu.be/ZiBnqI63Yzo
 https://youtu.be/zKklET7vMOk?t=58
 https://youtu.be/zmQUcLS5d_Q?t=146
 https://youtu.be/zMwh5jiCEsc
-https://youtu.be/ZPiImor60Cw
 https://youtu.be/ZpM4WTi1KX8
 https://youtu.be/zQ9eu7JhVug
 https://youtu.be/zqjW3rbMOcg?t=119
