@@ -24,6 +24,8 @@ sed -e 's|www\.||' \
     -e 's|\??t=|\?t=|g' \
     -e 's|&pp=[^&]*|?|g' \
     -e 's|\?$||' \
+    -e 's|\?$||' \
+    -e 's|\?$||' \
     -e 's/[[:space:]]*$//' "$input_file" > "$output_file"
 
 # Remove trailing blank lines from the output file
