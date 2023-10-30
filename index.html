@@ -4,20 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/w3.css">
-<link rel="stylesheet" href="css/font-awesome.min.css">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-27WK7L7741"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-27WK7L7741');
 </script>
 <style>
 table {
-    counter-reset: rowNumber;
-    border: 1px solid red;
+    counter-reset: rowNumber+1;
 }
 
 table tr:not(:first-child) {
@@ -33,6 +30,10 @@ table tr td:first-child::before {
 col:nth-child(3) {
     white-space: nowrap;
 }
+
+td:nth-child(2n+1) {
+    white-space: nowrap;
+}
 </style>
 <body>
 
@@ -44,29 +45,26 @@ col:nth-child(3) {
 
 <a href="../contact.html" 
    class="w3-bar-item w3-button w3-right w3-large" style="height:50px"><u>Contact</u></a>
-</div>
-</div>
-<!-- The Main Body -->
-<table class="w3-table w3-bordered w3-border-red w3-padding-64" style="margin-top:75px">
 
-<!-- Apply nowrap to the 3rd column -->
-<colgroup>
-<col span="2"> 
-<col>
-</colgroup>
-
+<table class="w3-table" >
 <tr>
-<th></th>
+<th style="width:50px"></th>
 <th>Drew . . .</th>    
-<th>destination</th>
-<th style="white-space: nowrap;">date</th>
+<td></td>
+<td></td>
 </tr>
+</table>
+</div>
+</div>
 
+<!-- The Main Body -->
+<table class="w3-table w3-bordered w3-padding-64" style="margin-top:100px">
 
 <tr>
 <td></td>
 <td>collected <span id="caneLinksCount"></span> cane video clips <i>you</i> CaneSee randomly by clicking one link repeatedly</td>
-<td><id="randomURL"><a href="#" id="randomLink">CaneSee</a><td><span id="currentDate"></span></td>
+<td><id="randomURL"><a href="#" id="randomLink">CaneSee</a>
+<td style="white-space: nowrap;"><span id="currentDate"></span></td>
 <script src="files/javascript.js"></script>
 </tr>
 
@@ -75,7 +73,7 @@ col:nth-child(3) {
 <td></td>
 <td>is the 1st Kanemaster to receive over 10K, 20K, 30K, 40K likes on a solo video</td>
 <td><a href="https://www.instagram.com/p/CvLDUP9pAiJ" target=_blank>link</a></td>
-<td>2023-08-01</td>
+<td style="white-space: nowrap;">2023-08-01</td>
 </tr>
 
 
