@@ -29,9 +29,14 @@ function countCaneLinks() {
   document.getElementById("caneLinksCount").textContent = formattedCount;
 }
 
-document.getElementById("randomLink").addEventListener("click", function(event) {
+document.getElementById("LogoLink").addEventListener("click", function(event) {
     event.preventDefault(); // Prevent the default link behavior (navigating to the href)
     openRandomURL(); // Open a random URL in a new tab when the link is clicked
+});
+
+document.getElementById("CaneSee").addEventListener("click", function(event) {
+    event.preventDefault(); 
+    openRandomURL(); 
 });
 
 // Fetch the content of the "cane_links.txt" file
