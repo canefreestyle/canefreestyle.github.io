@@ -11,6 +11,7 @@ output_file="files/modified_links.txt"
 # Replace "&pp=<VARIABLE STRING>" with "?"
 # Replace "%3D" with ""
 sed -e 's|www\.||' \
+    -e 's|?app=desktop&|?|g' \
     -e 's|https://youtube.com/shorts/|https://youtu.be/|g' \
     -e 's|https://youtube.com/watch?v=|https://youtu.be/|g' \
     -e 's|%3D||g' \
@@ -18,6 +19,7 @@ sed -e 's|www\.||' \
     -e 's|&index=[^&]*|?|g' \
     -e 's|utm_source=[^&]*|?|g' \
     -e 's|&igshid=[^&]*|?|g' \
+    -e 's|fbclid=[^&]*|?|g' \
     -e 's|&list=[^&]*||g' \
     -e 's|\?list=[^&]*|?|g' \
     -e 's|&t=|\?t=|g' \
