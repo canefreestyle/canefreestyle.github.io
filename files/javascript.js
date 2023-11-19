@@ -34,7 +34,7 @@ document.getElementById("LogoLink").addEventListener("click", function(event) {
     openRandomURL(); // Open a random URL in a new tab when the link is clicked
 });
 
-document.getElementById("CaneSee").addEventListener("click", function(event) {
+document.getElementById("CaneTV").addEventListener("click", function(event) {
     event.preventDefault(); 
     openRandomURL(); 
 });
