@@ -5,11 +5,11 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    min-height: 95vh;
-    max-height: 95vh;
+    min-height: 90vh;
+    max-height: 90vh;
     background-color: #000000;
-    font-family: 'Lucida Handwriting', cursive;
-    font-size: 26px;
+    font-style: italic;
+    font-size: 20px;
     color: #ffffff;
     cursor: pointer;
     overflow: hidden; 
@@ -30,17 +30,8 @@ main {
     height: auto;
 }
 
-footer {
-    text-align: center;
-    padding: 10px;
-    width: 40%;
+.dark-text {
+    font-family: Arial, sans-serif;
     font-size: 15px;
-    border-radius: 100px; 
-}
-
-footer a {
-    color: #333;
-    margin: 0 10px;
-    font-size: 15px;
-    font-family: Arial, sans;
+    color: #333333;
 }
