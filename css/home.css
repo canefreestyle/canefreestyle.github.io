@@ -10,7 +10,7 @@ body {
     background-color: #000000;
     font-style: italic;
     font-size: 20px;
-    color: #ffffff;
+    color: #ba0909;
     cursor: pointer;
     overflow: hidden; 
 }
@@ -34,4 +34,6 @@ main {
     font-family: Arial, sans-serif;
     font-size: 15px;
     color: #333333;
+    position: absolute;
+    bottom: 150px; 
 }
