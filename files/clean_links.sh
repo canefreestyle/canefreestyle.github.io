@@ -21,7 +21,10 @@ sed -e 's|www\.||' \
     -e 's|&igshid=[^&]*|?|g' \
     -e 's|fbclid=[^&]*|?|g' \
     -e 's|&list=[^&]*||g' \
+    -e 's|&web_id=[^&]*||g' \
+    -e 's|&sender_device=[^&]*||g' \
     -e 's|\?list=[^&]*|?|g' \
+    -e 's|\?is_from_webapp=[^&]*|?|g' \
     -e 's|&t=|\?t=|g' \
     -e 's|\??t=|\?t=|g' \
     -e 's|&pp=[^&]*|?|g' \
