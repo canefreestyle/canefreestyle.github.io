@@ -19,6 +19,7 @@ sed -e 's|www\.||' \
     -e 's|&index=[^&]*|?|g' \
     -e 's|utm_source=[^&]*|?|g' \
     -e 's|&igshid=[^&]*|?|g' \
+    -e 's|&igsh=[^&]*|?|g' \
     -e 's|fbclid=[^&]*|?|g' \
     -e 's|&list=[^&]*||g' \
     -e 's|&web_id=[^&]*||g' \
@@ -28,9 +29,11 @@ sed -e 's|www\.||' \
     -e 's|&t=|\?t=|g' \
     -e 's|\??t=|\?t=|g' \
     -e 's|&pp=[^&]*|?|g' \
+    -e 's|/$||' \
     -e 's|\?$||' \
     -e 's|\?$||' \
     -e 's|\?$||' \
+    -e 's|/$||' \
     -e 's/[[:space:]]*$//' "$input_file" > "$output_file"
 
 # Remove trailing blank lines from the output file
