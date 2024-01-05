@@ -20,6 +20,7 @@ sed -e 's|www\.||' \
     -e 's|utm_source=[^&]*|?|g' \
     -e 's|&igshid=[^&]*|?|g' \
     -e 's|&igsh=[^&]*|?|g' \
+    -e 's|?igsh=[^&]*|?|g' \
     -e 's|fbclid=[^&]*|?|g' \
     -e 's|&list=[^&]*||g' \
     -e 's|&web_id=[^&]*||g' \
