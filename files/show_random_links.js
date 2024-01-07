@@ -34,10 +34,14 @@ function openRandomURL() {
             const urlsArray = data.trim().split('\n').map(url => url.trim());
             const randomIndex = Math.floor(Math.random() * urlsArray.length);
             const randomURL = urlsArray[randomIndex];
- 
-            var windowReference = window.open("about:blank", "_blank");
 
-            windowReference.location.assign(randomURL);
+            setTimeout(() => {
+                window.open(randomURL, '_blank');
+            })
+
+           // var windowReference = window.open("about:blank", "_blank");
+
+            // windowReference.location.assign(randomURL);
         })
         .catch(error => {
             document.getElementById("mainContainer").innerHTML = `Error: ${error}`;
