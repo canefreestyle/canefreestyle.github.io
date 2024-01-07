@@ -1,6 +1,7 @@
 // Define a variable for cane_links
 let link_list = '';
 let counter = 0;
+let windowObjectReference = null;
 
 document.getElementById("Drew").addEventListener("click", function() {
     // Navigate to Drew's page if the small Drew link is clicked
@@ -56,3 +57,23 @@ function openRandomURL(randomURL) {
     var windowReference = window.open("about:blank",'_blank');
     windowReference.location = randomURL;
 }
+
+function openRequestedTab(url, windowName) {
+    if (windowObjectReference === null || windowObjectReference.closed) {
+    windowObjectReference = window.open(url, windowName);
+    } else {
+    windowObjectReference.focus();
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    const link = document.querySelector("a[target='OpenWikipediaWindow']");
+    link.addEventListener(
+    "click",
+    (event) => {
+        openRequestedTab(event.currentTarget.href, "OpenWikipediaWindow");
+        event.preventDefault();
+    },
+    false
+    );
+});

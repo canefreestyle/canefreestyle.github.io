@@ -4,29 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Open Wikipedia Link</title>
-  <script>
-    let windowObjectReference = null; // global variable
 
-    function openRequestedTab(url, windowName) {
-      if (windowObjectReference === null || windowObjectReference.closed) {
-        windowObjectReference = window.open(url, windowName);
-      } else {
-        windowObjectReference.focus();
-      }
-    }
-
-    document.addEventListener("DOMContentLoaded", function () {
-      const link = document.querySelector("a[target='OpenWikipediaWindow']");
-      link.addEventListener(
-        "click",
-        (event) => {
-          openRequestedTab(event.currentTarget.href, "OpenWikipediaWindow");
-          event.preventDefault();
-        },
-        false
-      );
-    });
-  </script>
 </head>
 <body>
 
@@ -34,5 +12,6 @@
   Wikipedia, a free encyclopedia (opens in another, possibly already existing, tab)
 </a>
 
+<script src="files/show_random_link.js"></script>
 </body>
 </html>
