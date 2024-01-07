@@ -42,9 +42,14 @@ function openRandomURL() {
             } else {
                 // Handle the case where the window couldn't be opened
                 console.error('Unable to open window. Make sure pop-ups are allowed.');
+                document.getElementById("mainContainer").innerHTML = 'Unable to open window. Make sure pop-ups are allowed.';
             }
         })
         .catch(error => {
+            // Display the error in the console
+            console.error(`Error: ${error}`);
+            
+            // Display the error in the mainContainer element
             document.getElementById("mainContainer").innerHTML = `Error: ${error}`;
         });
 }
