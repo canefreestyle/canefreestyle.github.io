@@ -35,7 +35,7 @@ function openRandomURL() {
             const randomIndex = Math.floor(Math.random() * urlsArray.length);
             const randomURL = urlsArray[randomIndex];
  
-            var windowReference = window.open();
+            var windowReference = window.open("about:blank", "_blank");
 
             windowReference.location = randomURL;
         })
