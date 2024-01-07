@@ -35,13 +35,10 @@ function openRandomURL() {
             const randomIndex = Math.floor(Math.random() * urlsArray.length);
             const randomURL = urlsArray[randomIndex];
 
-            setTimeout(() => {
-                window.open(randomURL, '_blank');
-            })
-
-           // var windowReference = window.open("about:blank", "_blank");
-
-            // windowReference.location.assign(randomURL);
+            const a = document.createElement("a"); 
+            a.setAttribute('href', randomURL); 
+            a.setAttribute('target', '_blank'); 
+            a.click(); 
         })
         .catch(error => {
             document.getElementById("mainContainer").innerHTML = `Error: ${error}`;
