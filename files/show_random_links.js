@@ -37,7 +37,7 @@ function openRandomURL() {
  
             var windowReference = window.open("about:blank", "_blank");
 
-            windowReference.location = randomURL;
+            windowReference.location.assign(randomURL);
         })
         .catch(error => {
             document.getElementById("mainContainer").innerHTML = `Error: ${error}`;
