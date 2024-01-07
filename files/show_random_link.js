@@ -35,7 +35,14 @@ function openRandomURL() {
             const randomIndex = Math.floor(Math.random() * urlsArray.length);
             const randomURL = urlsArray[randomIndex];
 
-            window.open(randomURL, '_blank').focus();
+            var newWindow = window.open(randomURL, '_blank');
+
+            if (newWindow) {
+                newWindow.focus();
+            } else {
+                // Handle the case where the window couldn't be opened
+                console.error('Unable to open window. Make sure pop-ups are allowed.');
+            }
         })
         .catch(error => {
             document.getElementById("mainContainer").innerHTML = `Error: ${error}`;
