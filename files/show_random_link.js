@@ -8,12 +8,12 @@ document.getElementById("Drew").addEventListener("click", function() {
 });
 
 // Add an event listener to run the necessary functions before the user clicks
-document.getElementById("mainContainer").addEventListener("mousedown", function() {
+document.getElementById("mainContainer").addEventListener("click", function() {
     countClicks();
     setLinkList();
 
     // Fetch the random URL and open it after resolving the promise
-    setRandomURL().then(randomURL => {
+    getRandomURL().then(randomURL => {
         openRandomURL(randomURL);
     });
 });
@@ -36,7 +36,7 @@ function setLinkList() {
     }
 }
 
-function setRandomURL() {
+function getRandomURL() {
     // Fetch the content of the specified link_list file
     return fetch(link_list)
         .then(response => response.text())
@@ -53,6 +53,6 @@ function setRandomURL() {
 }
 
 function openRandomURL(randomURL) {
-    var windowReference = window.open();
+    var windowReference = window.open("about:blank",'_blank');
     windowReference.location = randomURL;
 }
