@@ -55,10 +55,10 @@ function getRandomURL() {
 
 function openNewTab(randomURL) {
     if (windowObjectReference === null || windowObjectReference.closed) {
-        document.getElementById("mainContainer").innerHTML = `A randomURL: ${randomURL}`;
-        // windowObjectReference = window.open(randomURL, "OpenWikipediaWindow");
+        // document.getElementById("mainContainer").innerHTML = `A randomURL: ${randomURL}`;
+        windowObjectReference = window.open(randomURL, "OpenWikipediaWindow");
     } else {
-        document.getElementById("mainContainer").innerHTML = `B randomURL: ${randomURL}`;
-        // windowObjectReference.focus();
+        // document.getElementById("mainContainer").innerHTML = `B randomURL: ${randomURL}`;
+        windowObjectReference.focus();
     }
 }
