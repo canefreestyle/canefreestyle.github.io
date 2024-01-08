@@ -1,29 +1,38 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Cane Freestyle</title>
-    <meta charset="UTF-8">
-    <meta name="description" content="Discover thousands of cane freestyle performance videos!">
-    <meta name="keywords" content="cane freestyle, canefreestyle, kane twirlin, Kappa Alpha Psi, step shows">
-    <meta name="author" content="Drew Brown">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/home.css">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-27WK7L7741"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-27WK7L7741');
-    </script>
-</head>
-<body scroll="no" style="overflow: hidden">
-  <main id="mainContainer">
-    <a href="#" id="LogoLink"><img src="image/slash_logo.png" alt="canefreestyle"></a>
-    <p>Click repeatedly to discover 6,351 random cane freestyle video clips!</p>
-  </main>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open Wikipedia Link</title>
+  <script>
+    let windowObjectReference = null; // global variable
 
-  <p class="dark-text"><a id="Drew">&copy 2023 Drew</a></p>
-  <script src="files/test.js"></script>
+    function openRequestedTab(url, windowName) {
+      if (windowObjectReference === null || windowObjectReference.closed) {
+        windowObjectReference = window.open(url, windowName);
+      } else {
+        windowObjectReference.focus();
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const link = document.querySelector("a[target='OpenWikipediaWindow']");
+      link.addEventListener(
+        "click",
+        (event) => {
+          openRequestedTab(event.currentTarget.href, "OpenWikipediaWindow");
+          event.preventDefault();
+        },
+        false
+      );
+    });
+  </script>
+</head>
+<body>
+
+<a href="https://www.yahoo.com" target="OpenWikipediaWindow">
+  Wikipedia, a free encyclopedia (opens in another, possibly already existing, tab)
+</a>
+
 </body>
 </html>
