@@ -15,7 +15,7 @@ document.getElementById("mainContainer").addEventListener("click", function() {
 
     // Fetch the random URL and open it after resolving the promise
     getRandomURL().then(randomURL => {
-        openRandomURL(randomURL);
+        openNewTab(randomURL);
     });
 });
 
@@ -45,7 +45,7 @@ function getRandomURL() {
             // Select a random URL from the link_list
             const urlsArray = data.trim().split('\n').map(url => url.trim());
             const randomIndex = Math.floor(Math.random() * urlsArray.length);
-            return urlsArray[randomIndex].toString();
+            return urlsArray[randomIndex];
         })
         .catch(error => {
             // Display the error in the mainContainer element
@@ -53,27 +53,12 @@ function getRandomURL() {
         });
 }
 
-function openRandomURL(randomURL) {
-    var windowReference = window.open("about:blank",'_blank');
-    windowReference.location = randomURL;
-}
-
-function openRequestedTab(url, windowName) {
+function openNewTab(randomURL) {
     if (windowObjectReference === null || windowObjectReference.closed) {
-    windowObjectReference = window.open(url, windowName);
+        document.getElementById("mainContainer").innerHTML = `A randomURL: ${randomURL}`;
+        // windowObjectReference = window.open(randomURL, "OpenWikipediaWindow");
     } else {
-    windowObjectReference.focus();
+        document.getElementById("mainContainer").innerHTML = `B randomURL: ${randomURL}`;
+        // windowObjectReference.focus();
     }
 }
-
-document.addEventListener("DOMContentLoaded", function () {
-    const link = document.querySelector("a[target='OpenWikipediaWindow']");
-    link.addEventListener(
-    "click",
-    (event) => {
-        openRequestedTab(event.currentTarget.href, "OpenWikipediaWindow");
-        event.preventDefault();
-    },
-    false
-    );
-});
