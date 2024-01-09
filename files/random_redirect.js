@@ -21,7 +21,7 @@ async function setLinkList() {
     let counter = await countClicks();
 
     if (counter === 1) {
-        link_list = 'https://canefreestyle.com/files/ad_links.txt';
+        link_list = 'https://canefreestyle.com/files/cane_links.txt';
     } else {
         link_list = 'https://canefreestyle.com/files/cane_links.txt';
     }
