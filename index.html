@@ -11,19 +11,35 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-27WK7L7741"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-27WK7L7741');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-27WK7L7741');
     </script>
 </head>
 <body scroll="no" style="overflow: hidden">
-  <main id="mainContainer">
-    <a href="#" id="LogoLink"><img src="image/slash_logo.png" alt="canefreestyle"></a>
-    <p>Click repeatedly to discover 6,341 random cane freestyle video clips!</p>
-  </main>
+    <main id="mainContainer">
+        <a href="files/random_redirect.html" id="redirectLink" target="_blank">
+            <img src="image/slash_logo.png" alt="canefreestyle">
+        </a>
+        <p>Click repeatedly to discover 6,341 random cane freestyle video clips!</p>
+    </main>
 
-  <p class="dark-text"><a id="Drew">&copy 2023 Drew</a></p>
-  <script src="files/show_random_link.js"></script>
+    <a href="drew/index.html" class="dark-text" target="_blank">&copy; 2023 Drew</a>
+
+    <script>
+        document.getElementById("mainContainer").addEventListener("click", function() {
+            // Create a new anchor element
+            var redirectLink = document.getElementById("redirectLink");
+            var newLink = document.createElement("a");
+            newLink.href = redirectLink.href;
+            newLink.target = "_blank";
+
+            // Trigger a click on the new anchor element
+            document.body.appendChild(newLink);
+            newLink.click();
+            document.body.removeChild(newLink);
+        });
+    </script>
 </body>
 </html>

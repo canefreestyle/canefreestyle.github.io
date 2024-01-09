@@ -12,7 +12,7 @@ body {
     font-size: 20px;
     color: #ba0909;
     cursor: pointer;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 main {
@@ -21,7 +21,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column; 
+    flex-direction: column;
     text-align: center;
 }
 
@@ -30,10 +30,11 @@ main {
     height: auto;
 }
 
-.dark-text {
+.dark-text, .dark-text:visited {
     font-family: Arial, sans-serif;
     font-size: 15px;
     color: #333333;
+    text-decoration: none;
     position: absolute;
-    bottom: 150px; 
+    bottom: 150px;
 }
