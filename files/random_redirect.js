@@ -32,6 +32,7 @@ async function setLinkList() {
 async function getRandomURL() {
     // Fetch the content of the specified link_list file
     let link_list = await setLinkList();
+
     try {
         const response = await fetch(link_list);
 

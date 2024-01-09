@@ -109,7 +109,7 @@ function push_changes {
     git commit -m "$formatted_count links"
     git push
 
-    echo "Changes pushed"
+    echo "Changes pushed!"
   fi
 }
 
