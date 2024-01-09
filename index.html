@@ -19,7 +19,7 @@
 </head>
 <body scroll="no" style="overflow: hidden">
     <main id="mainContainer">
-        <a href="files/random_redirect.html" id="redirectLink" target="_blank">
+        <a href="files/random_redirect.html" id="LogoLink" target="_blank">
             <img src="image/slash_logo.png" alt="canefreestyle">
         </a>
         <p>Click repeatedly to discover 6,341 random cane freestyle video clips!</p>
@@ -30,7 +30,7 @@
     <script>
         document.getElementById("mainContainer").addEventListener("click", function() {
             // Create a new anchor element
-            var redirectLink = document.getElementById("redirectLink");
+            var redirectLink = document.getElementById("LogoLink");
             var newLink = document.createElement("a");
             newLink.href = redirectLink.href;
             newLink.target = "_blank";
