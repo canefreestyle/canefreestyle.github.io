@@ -170,6 +170,7 @@ function remove_cane_links {
     while IFS= read -r url; do
       # Escape special characters in the URL for sed
       escaped_url=$(printf "%s\n" "$url" | sed 's/[\&/]/\\&/g')
+
       # Check if the URL is in cane_links.txt before removing
       if grep -q "$url" "$cane_links_file"; then
         sed -i "\|$escaped_url|d" "$cane_links_file"
