@@ -204,7 +204,7 @@ function update_link_counts {
 
 # Call the functions
 clean_links
+remove_cane_links
 count_cane_links
 update_link_counts
-remove_cane_links
 push_changes
