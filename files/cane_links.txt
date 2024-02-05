@@ -1889,7 +1889,6 @@ https://instagram.com/p/CEuF6etDseO
 https://instagram.com/p/CeUzxNZlxe_
 https://instagram.com/p/CEVQob8HJVt
 https://instagram.com/p/CEW1oU6gNag
-https://instagram.com/p/CEW3Ap7HYFI
 https://instagram.com/p/CewiKi-JGwr
 https://instagram.com/p/CeWKXX4FfAD
 https://instagram.com/p/Cey2-osjk-5
@@ -5198,6 +5197,7 @@ https://youtu.be/6dPU2LvDcXU?t=169
 https://youtu.be/6dPU2LvDcXU?t=35
 https://youtu.be/6f_0RIBDj0Q
 https://youtu.be/6h1Pdv0uU6Q
+https://youtu.be/6KHrysNvGKQ
 https://youtu.be/6lNynK7vp9o
 https://youtu.be/6m2JvGHBsOE
 https://youtu.be/6N4j5ox7pio?t=119
@@ -5409,7 +5409,7 @@ https://youtu.be/CmpNG9Kgd0I?t=63
 https://youtu.be/cn97_Yte7v4
 https://youtu.be/CNqYjiUXFdY
 https://youtu.be/CocWToZUBsU
-https://youtu.be/cOwFxp85MQI
+https://youtu.be/cOwFxp85MQI?t=78
 https://youtu.be/_cPiV2FfkfQ?t=27
 https://youtu.be/cPJMritYwIs
 https://youtu.be/CPX3j8hgIdg
@@ -5439,6 +5439,7 @@ https://youtu.be/d9jNeKgjs2k?t=64
 https://youtu.be/d9y5qxpBr44
 https://youtu.be/DaCG6RcQ8ok
 https://youtu.be/dbKwpUgLG5U
+https://youtu.be/dBvRvyfaQBs
 https://youtu.be/DcrAVKIo5lI?t=247
 https://youtu.be/DcrAVKIo5lI?t=351
 https://youtu.be/DcrAVKIo5lI?t=513
@@ -6204,6 +6205,7 @@ https://youtu.be/rHq0bAOQym4?t=90
 https://youtu.be/Rk_W2kvjCxA
 https://youtu.be/RKzl_tfpMZ0
 https://youtu.be/RL8SovzTrgk
+https://youtu.be/rlF6gL-nb3Y?t=131
 https://youtu.be/RLjRP_etmxc?t=135
 https://youtu.be/RNeZohjTI3g
 https://youtu.be/rp75xPCkqcE
@@ -6647,4 +6649,5 @@ https://youtu.be/ZTUnxrkQ34U?t=7
 https://youtu.be/zuL8i_iKvTI?t=14
 https://youtu.be/ZVE6wWm7yog
 https://youtu.be/zw5Ac4xYTIU
+https://youtu.be/ZwOUrvfYKbE?t=40
 https://youtu.be/zXKQmVrQECk
