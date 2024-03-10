@@ -63,15 +63,15 @@ async function displayRandomURL() {
     // Fetch the random URL
     await getRandomURL();
 
-    // if (randomURL) {
-    //     // Redirect to randomURL
-    //     window.location.href = randomURL;
-    // }
-
     if (randomURL) {
-        // Display the counter, link list, and random URL
-        document.getElementById("mainContainer").innerHTML = `Click Count: ${counter}<br>Link List: ${link_list}<br>Random URL: ${randomURL}`;
+        // Redirect to randomURL
+        window.location.href = randomURL;
     }
+
+    // if (randomURL) {
+    //     // Display the counter, link list, and random URL
+    //     document.getElementById("mainContainer").innerHTML = `Click Count: ${counter}<br>Link List: ${link_list}<br>Random URL: ${randomURL}`;
+    // }
 }
 
 // Call the displayRandomURL function
