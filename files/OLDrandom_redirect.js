@@ -1,11 +1,6 @@
-// Declare global variables
-let counter;
-let link_list;
-let randomURL;
-
 async function countClicks() {
     // Retrieve the counter value from local storage or initialize it to 0
-    counter = parseInt(localStorage.getItem('counter')) || 0;
+    let counter = parseInt(localStorage.getItem('counter')) || 0;
 
     // Increment the counter each time the page is visited
     counter++;
@@ -17,23 +12,26 @@ async function countClicks() {
 
     // Save the updated counter value in local storage
     localStorage.setItem('counter', counter);
+
+    return counter;
 }
 
 async function setLinkList() {
-    // Fetch the counter value
-    await countClicks();
+    let link_list;
+    let counter = await countClicks();
 
-    // Determine the link list based on the counter value
     if (counter === 3) {
         link_list = 'https://canefreestyle.com/files/drew_links.txt';
     } else {
         link_list = 'https://canefreestyle.com/files/cane_links.txt';
     }
+
+    return link_list;
 }
 
 async function getRandomURL() {
-    // Fetch the link list
-    await setLinkList();
+    // Fetch the content of the specified link_list file
+    let link_list = await setLinkList();
 
     try {
         const response = await fetch(link_list);
@@ -48,31 +46,38 @@ async function getRandomURL() {
         const urlsArray = data.trim().split('\n').map(url => url.trim());
         const randomIndex = Math.floor(Math.random() * urlsArray.length);
 
-        // Set the randomURL value
-        randomURL = urlsArray[randomIndex].toString();
+        random_url = urlsArray[randomIndex].toString();
+
+        return random_url;
     } catch (error) {
         // Display the error in the mainContainer element
         document.getElementById("mainContainer").innerHTML = `Error: ${error.message}`;
 
-        // Reset the randomURL value
-        randomURL = null;
+        // Return null to indicate an error
+        return null; 
     }
 }
 
 async function displayRandomURL() {
-    // Fetch the random URL
-    await getRandomURL();
-
-    // if (randomURL) {
-    //     // Redirect to randomURL
-    //     window.location.href = randomURL;
-    // }
+    let counter = await countClicks();
+    let link_list = await setLinkList();
+    let randomURL = await getRandomURL();
 
     if (randomURL) {
         // Display the counter, link list, and random URL
-        document.getElementById("mainContainer").innerHTML = `Click Count: ${counter}<br>Link List: ${link_list}<br>Random URL: ${randomURL}`;
+        document.getElementById("mainContainer").innerHTML = `Counter: ${counter}<br>Link List: ${link_list}<br>Random URL: ${randomURL}`;
     }
 }
 
-// Call the displayRandomURL function
+// async function displayRandomURL() {
+//     let randomURL = await getRandomURL();
+
+//     if (randomURL) {
+//         // Redirect to randomURL
+//         window.location.href = randomURL;
+
+//         // document.getElementById("mainContainer").innerHTML = `randomURL: ${randomURL}`;
+//     }
+// }
+
 displayRandomURL();
