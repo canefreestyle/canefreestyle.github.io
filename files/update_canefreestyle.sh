@@ -10,7 +10,7 @@ function clean_links {
 
     echo "${FUNCNAME}():"
 
-    for file in "bad_links.txt" "private_links.txt" "cane_links.txt"; do
+    for file in "bad_links.txt" "private_links.txt" "cane_links.txt" "drew_links.txt"; do
       local input_file="$LINKS_DIRECTORY/$file"
       local output_file="$LINKS_DIRECTORY/cleaned_$file"
 
