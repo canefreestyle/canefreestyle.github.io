@@ -5443,11 +5443,8 @@ https://youtu.be/5eg69Sv_cGk?t=28
 https://youtu.be/5eg69Sv_cGk?t=298
 https://youtu.be/5eg69Sv_cGk?t=354
 https://youtu.be/5eg69Sv_cGk?t=418
-https://youtu.be/5eg69Sv_cGk?t=418s
 https://youtu.be/5eg69Sv_cGk?t=461
-https://youtu.be/5eg69Sv_cGk?t=461s
 https://youtu.be/5eg69Sv_cGk?t=564
-https://youtu.be/5eg69Sv_cGk?t=564s
 https://youtu.be/5iftB7skcog?t=96
 https://youtu.be/5j2HuMkM5XU
 https://youtu.be/5kCcYbc4KiI
@@ -5498,7 +5495,6 @@ https://youtu.be/6XpGNmUwcUg
 https://youtu.be/73t0fSUt0OI?t=23
 https://youtu.be/75aumTQmSSg?t=240
 https://youtu.be/75ZV8fu199k?t=131
-https://youtu.be/75ZV8fu199k?t=131s
 https://youtu.be/76APZw0pYhI?t=22
 https://youtu.be/77a8gRxk7xw
 https://youtu.be/7bHtaqTnQsg?t=51
@@ -5577,7 +5573,6 @@ https://youtu.be/aBQgU1niat4?t=75
 https://youtu.be/ACFKFCz66xU
 https://youtu.be/ACgdLEPmGys
 https://youtu.be/Ad2JWdg42fI?t=43
-https://youtu.be/Ad2JWdg42fI?t=43s
 https://youtu.be/Ae3swWPTAH8?t=412
 https://youtu.be/afrbhOT4LW8
 https://youtu.be/-aFvkW3u24I?t=124
@@ -5604,7 +5599,6 @@ https://youtu.be/ARDAbmregS0
 https://youtu.be/arVySPnn0w4
 https://youtu.be/ASJn80WheWs?t=209
 https://youtu.be/ASJn80WheWs?t=39
-https://youtu.be/ASJn80WheWs?t=39s
 https://youtu.be/aSQIQZyRUb8?t=476
 https://youtu.be/ASXDbgY3VpU
 https://youtu.be/AU0BxXfcq80
@@ -6003,7 +5997,7 @@ https://youtu.be/h76GrudZ0To
 https://youtu.be/h7DXZxcFMyo
 https://youtu.be/hah9JrI8JE8?t=253
 https://youtu.be/hB3hf_UJNto
-https://youtu.be/Hba2PnE2nBE?t=506
+https://youtu.be/Hba2PnE2nBE?t=511
 https://youtu.be/HBx96KIJLfs
 https://youtu.be/HcyokT-civs
 https://youtu.be/-heorOk6Xzk
@@ -6101,7 +6095,6 @@ https://youtu.be/ivpzp0GXpvQ?t=93
 https://youtu.be/i_-w82J38ko
 https://youtu.be/i_-w82J38ko?t=231
 https://youtu.be/i_-w82J38ko?t=463
-https://youtu.be/i_-w82J38ko?t=463s
 https://youtu.be/IWtx4p8Y87Q
 https://youtu.be/iWWAtWAUsf0
 https://youtu.be/Ixks9uFhWTc
@@ -6116,7 +6109,6 @@ https://youtu.be/-J5XiynRFdk?t=159
 https://youtu.be/-J5XiynRFdk?t=8
 https://youtu.be/J6XPvOHLNGw
 https://youtu.be/j7dj36TGeIk?t=235
-https://youtu.be/j7dj36TGeIk?t=235s
 https://youtu.be/JBA81YMtLu8?t=227
 https://youtu.be/JBR_VbOOujU
 https://youtu.be/jClPld_r7D0
@@ -6153,7 +6145,6 @@ https://youtu.be/jX6PJ9v3FEw
 https://youtu.be/JxP1TRvRa3I?t=483
 https://youtu.be/JYiPUC_L1IQ
 https://youtu.be/JZ9n-LsEROk?t=111
-https://youtu.be/JZ9n-LsEROk?t=111s
 https://youtu.be/jZGgBCzyU1Y?t=139
 https://youtu.be/jZwP1d4L57M?t=29
 https://youtu.be/k1dbhJU2XtE
@@ -6370,7 +6361,6 @@ https://youtu.be/ob6-pJJ-j0g
 https://youtu.be/OB-7WH9Lj5c
 https://youtu.be/oBiclI1lhxs
 https://youtu.be/oBiclI1lhxs?t=18
-https://youtu.be/oBiclI1lhxs?t=18s
 https://youtu.be/oBIYJzYbRjk?t=117
 https://youtu.be/Obrd1O4rdtE
 https://youtu.be/ocEKj-ZjbHQ
