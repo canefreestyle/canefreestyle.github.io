@@ -1,18 +1,37 @@
 #!/bin/bash
 
-function clean_links {
-    # Get the directory of the current script
-    LINKS_DIRECTORY="$(dirname "$(readlink -f "$0")")"
-
-    # Set the input and output files
-    local input_file="$LINKS_DIRECTORY/$1"
-    local output_file="$LINKS_DIRECTORY/cleaned_$1"
-
+function get_links_files {
     echo "${FUNCNAME}():"
 
-    for file in "bad_links.txt" "private_links.txt" "cane_links.txt" "drew_links.txt"; do
-      local input_file="$LINKS_DIRECTORY/$file"
-      local output_file="$LINKS_DIRECTORY/cleaned_$file"
+    # Get the path to the links directory at the same level as the parent directory 
+    LINKS_DIRECTORY="$(dirname "$(dirname "$(readlink -f "$0")")")/links"
+
+    # Create an empty array
+    LINKS_FILES=()
+
+    # Iterate over files in the directory
+    for text_file in "$LINKS_DIRECTORY"/*.txt; do
+        # Check if the file exists and is a regular file
+        if [ -f "$text_file" ]; then
+            # Add the file to the array
+            LINKS_FILES+=("$text_file")
+
+            echo "  $text_file"
+        fi
+    done
+
+   # echo "${LINKS_FILES[@]}"
+}
+
+
+function clean_links {
+    echo "${FUNCNAME}():"
+
+    # Loop through the links files that need to be cleaned
+    for file in "${LINKS_FILES[@]}"; do
+
+      local input_file=$file
+      local output_file="$(mktemp /tmp/$(basename "$file").XXXXXX)"
 
       if [[ ! -f "$input_file" ]]; then
           echo "  Make sure $input_file is valid file with a list of URLs to clean"
@@ -63,7 +82,7 @@ function clean_links {
       # Remove the intermediate modified file
       rm "$output_file"
 
-      echo "  Cleaned $input_file"
+      echo "  Cleaned $(basename $input_file)"
     done
 
   echo " "
@@ -98,40 +117,28 @@ function confirm_yes_or_no {
 
 
 function count_cane_links {
-  LINKS_DIRECTORY="$(dirname "$(readlink -f "$0")")"
-
   echo "${FUNCNAME}():"
 
-  # Set the input and output files
-  bad_links="$LINKS_DIRECTORY/bad_links.txt"
-  cane_links="$LINKS_DIRECTORY/cane_links.txt"
-  private_links="$LINKS_DIRECTORY/private_links.txt"
-
   # Check if the input files exist
-  for file in "$bad_links" "$cane_links" "$private_links"; do
+  for file in "${LINKS_FILES[@]}"; do
     if [[ ! -f "$file" ]]; then
       echo "  Specify a valid file with a list of URLs to clean: $file"
       exit 1
     fi
+
+    # Sum the total number of in all the links files
+    total_links_count=$((total_links_count + $(wc -l < "$file")))
   done
 
-  # Count the number of rows in each file
-  bad_links_count=$(wc -l < "$bad_links")
-  cane_links_count=$(wc -l < "$cane_links")
-  private_links_count=$(wc -l < "$private_links")
+  # Count the number of rows in the cane links file
+  cane_links_count=$(wc -l < "/media/drew/ark/code/canefreestyle/links/cane_links.txt")
 
   # Format the count with commas
   formatted_cane_links_count=$(printf "%'d" "$cane_links_count")
-
-  total_links_count=$((bad_links_count + cane_links_count + private_links_count))
-
   formatted_total_links_count=$(printf "%'d" "$total_links_count")
 
-  echo "  $bad_links_count bad links"
-  echo "  $cane_links_count cane links"
-  echo "  $private_links_count private links"
-  echo "  Active cane links: $formatted_cane_links_count"
-  echo "  Total links: $formatted_total_links_count"
+  echo "  $formatted_cane_links_count cane links"
+  echo "  $formatted_total_links_count total links"
   echo " "
 }
 
@@ -139,7 +146,7 @@ function count_cane_links {
 function push_changes {
   if confirm_yes_or_no "  Git push changes?"; then
     git add -A
-    git commit -m "$formatted_count links"
+    git commit -m "$formatted_total_links_count links"
     git push
 
     echo "Changes pushed!"
@@ -148,11 +155,9 @@ function push_changes {
 
 
 function remove_cane_links {
-  LINKS_DIRECTORY="$(dirname "$(readlink -f "$0")")"
-
   echo "${FUNCNAME}():"
 
-  # Set the input and output files
+  # Set the files containing URLs that should be removed
   bad_links_file="$LINKS_DIRECTORY/bad_links.txt"
   private_links_file="$LINKS_DIRECTORY/private_links.txt"
   cane_links_file="$LINKS_DIRECTORY/cane_links.txt"
@@ -203,6 +208,7 @@ function update_link_counts {
 
 
 # Call the functions
+get_links_files
 clean_links
 remove_cane_links
 count_cane_links

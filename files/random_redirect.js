@@ -25,9 +25,9 @@ async function setLinkList() {
 
     // Determine the link list based on the counter value
     if (counter === 3) {
-        link_list = 'https://canefreestyle.com/files/drew_links.txt';
+        link_list = 'https://canefreestyle.com/links/drew_links.txt';
     } else {
-        link_list = 'https://canefreestyle.com/files/cane_links.txt';
+        link_list = 'https://canefreestyle.com/links/cane_links.txt';
     }
 }
 
