@@ -39,7 +39,7 @@ async function getRandomURL() {
         const response = await fetch(link_list);
 
         if (!response.ok) {
-            throw new Error(`Network response was not ok: ${response.status}`);
+            throw new Error(`Network response was not ok: ${response.status} ${link_list}`);
         }
 
         const data = await response.text();
