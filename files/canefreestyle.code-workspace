@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"extensions.ignoreRecommendations": true,
+		"git.ignoreLimitWarning": true,
+		"search.useIgnoreFiles": true,
+		"search.useParentIgnoreFiles": true,
+		"editor.suggest.snippetsPreventQuickSuggestions": false,
+		"aiXcoder.showTrayIcon": true
+	}
+}

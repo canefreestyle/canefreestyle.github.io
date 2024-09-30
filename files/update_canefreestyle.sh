@@ -142,6 +142,18 @@ function count_cane_links {
   echo " "
 }
 
+function open_canefreestyle_files {
+  if ! command -v code > /dev/null 2>&1; then
+    echo "  Install VScode"
+    exit 1
+  fi
+
+  code $HOME/ark/code/canefreestyle/files/canefreestyle.code-workspace --reuse-window &
+ 
+  sleep 1
+
+  code $HOME/ark/code/canefreestyle/files/canefreestyle.code-workspace --reuse-window &
+}
 
 function push_changes {
   if confirm_yes_or_no "  Git push changes?"; then
@@ -157,10 +169,12 @@ function push_changes {
 function remove_cane_links {
   echo "${FUNCNAME}():"
 
+  cane_links_file="$1"
+
   # Set the files containing URLs that should be removed
   bad_links_file="$LINKS_DIRECTORY/bad_links.txt"
   private_links_file="$LINKS_DIRECTORY/private_links.txt"
-  cane_links_file="$LINKS_DIRECTORY/cane_links.txt"
+  cane_links_file="$LINKS_DIRECTORY/$cane_links_file"
 
   # Check if input files exist
   for file in "$bad_links_file" "$private_links_file" "$cane_links_file"; do
@@ -179,7 +193,7 @@ function remove_cane_links {
       # Check if the URL is in cane_links.txt before removing
       if grep -q "$url" "$cane_links_file"; then
         sed -i "\|$escaped_url|d" "$cane_links_file"
-        echo "  Removed $url from cane_links.txt"
+        echo "  Removed $url from $cane_links_file"
       fi
     done < "$input_file"
   done
@@ -208,9 +222,11 @@ function update_link_counts {
 
 
 # Call the functions
+open_canefreestyle_files
 get_links_files
-clean_links
-remove_cane_links
+clean_links 
+remove_cane_links cane_links.txt
+remove_cane_links drew_links.txt
 count_cane_links
 update_link_counts
 push_changes
