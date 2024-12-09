@@ -24,7 +24,7 @@ async function setLinkList() {
     await countClicks();
 
     // Determine the link list based on the counter value
-    if (counter === 3) {
+    if (counter === 1) {
         link_list = 'https://canefreestyle.com/links/drew_links.txt';
     } else {
         link_list = 'https://canefreestyle.com/links/cane_links.txt';
