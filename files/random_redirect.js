@@ -11,7 +11,7 @@ async function countClicks() {
     counter++;
 
     // After counter reaches 10, reset it to 1 (to show an ad link every 10 visits)
-    if (counter > 6) {
+    if (counter > 10) {
         counter = 1;
     }
 
@@ -24,7 +24,7 @@ async function setLinkList() {
     await countClicks();
 
     // Determine the link list based on the counter value
-    if (counter === 3 || counter === 6) {
+    if (counter === 3 || counter === 6 || counter === 9) {
         link_list = 'https://canefreestyle.com/links/drew_links.txt';
     } else {
         link_list = 'https://canefreestyle.com/links/cane_links.txt';
