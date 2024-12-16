@@ -148,11 +148,9 @@ function open_canefreestyle_files {
     exit 1
   fi
 
-  code $HOME/ark/code/canefreestyle/files/canefreestyle.code-workspace --reuse-window &
- 
-  sleep 1
-
-  code $HOME/ark/code/canefreestyle/files/canefreestyle.code-workspace --reuse-window &
+  if confirm_yes_or_no "  Open canefreestyle files in VSCode?Git push changes?"; then
+     code --reuse-window $LINKS_DIRECTORY/*.txt
+  fi
 }
 
 function push_changes {
@@ -222,8 +220,8 @@ function update_link_counts {
 
 
 # Call the functions
-open_canefreestyle_files
 get_links_files
+open_canefreestyle_files
 clean_links 
 remove_cane_links cane_links.txt
 remove_cane_links drew_links.txt
